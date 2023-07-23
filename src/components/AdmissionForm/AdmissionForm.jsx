@@ -1,6 +1,14 @@
+import { Helmet } from "react-helmet-async";
+import { useParams } from "react-router-dom";
+
 const AdmissionForm = () => {
+  const { id } = useParams();
+  console.log(id);
   return (
     <section>
+      <Helmet>
+        <title>EduHub | Admission Form</title>
+      </Helmet>
       <div className="relative my-20 flex flex-col justify-center min-h-screen overflow-hidden">
         <div className="w-full p-6 m-auto bg-white rounded-md shadow-xl lg:max-w-xl">
           <h1 className="text-3xl font-semibold text-center text-[#1eb2a6] uppercase">

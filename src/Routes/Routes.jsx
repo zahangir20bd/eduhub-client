@@ -23,7 +23,7 @@ export const router = createBrowserRouter([
         element: <Admissions />,
       },
       {
-        path: "/admission-form",
+        path: "/admission-form/:id",
         element: <AdmissionForm />,
       },
     ],

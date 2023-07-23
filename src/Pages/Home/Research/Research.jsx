@@ -8,7 +8,7 @@ const Research = () => {
   const [showAll, setShowAll] = useState(false);
 
   useState(() => {
-    fetch("Jurnals.json")
+    fetch("http://localhost:5000/journals")
       .then((res) => res.json())
       .then((data) => setResearches(data));
   }, []);
@@ -25,8 +25,8 @@ const Research = () => {
     <section className="mx-2 md:mx-4">
       <SectionTitle section_title="Important Research Links" />
       <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-4 gap-5">
-        {displayedResearch.map((val, index) => (
-          <div key={index} className="bg-[#fff] p-10 ">
+        {displayedResearch.map((val) => (
+          <div key={val._id} className="bg-[#fff] p-10 ">
             <div className="flex flex-col items-center justify-between h-full">
               <div>
                 <p className="text-xl text-center uppercase font-bold mb-5">

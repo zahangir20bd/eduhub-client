@@ -1,34 +1,31 @@
-import { useEffect, useState } from "react";
 import SectionTitle from "../../components/Common/SectionTitle/SectionTitle";
 import SectionBanner from "../../components/SectionBanner/SectionBanner";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import useColleges from "../../hooks/useColleges";
 
 const Admissions = () => {
-  const [colleges, setColleges] = useState([]);
-
-  useEffect(() => {
-    fetch("colleges.json")
-      .then((res) => res.json())
-      .then((data) => {
-        // console.log(data);
-        setColleges(data);
-      });
-  }, []);
+  const [colleges] = useColleges();
 
   return (
     <section>
+      <Helmet>
+        <title>EduHub | Admission</title>
+      </Helmet>
       <SectionBanner
         heading="Admission"
         subHeading="Choose your desire College"
       />
       <SectionTitle section_title="Select college where you want to get admission" />
       <ul>
-        {colleges.map((college, index) => (
+        {colleges.map((college) => (
           <li
             className="text-3xl md:text-5xl text-primary-focus mb-8 text-center font-bold"
-            key={index}
+            key={college._id}
           >
-            <Link to="/admission-form">{college.college_name}</Link>
+            <Link to={{ pathname: `/admission-form/${college._id}` }}>
+              {college.college_name}
+            </Link>
           </li>
         ))}
       </ul>

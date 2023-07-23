@@ -1,24 +1,20 @@
-import { useEffect, useState } from "react";
 import SectionBanner from "../../components/SectionBanner/SectionBanner";
 import { Link } from "react-router-dom";
+import { Helmet } from "react-helmet-async";
+import useColleges from "../../hooks/useColleges";
 
 const AllColleges = () => {
-  const [colleges, setColleges] = useState([]);
+  const [colleges] = useColleges();
 
-  useEffect(() => {
-    fetch("colleges.json")
-      .then((res) => res.json())
-      .then((data) => {
-        // console.log(data);
-        setColleges(data);
-      });
-  }, []);
   return (
     <section>
+      <Helmet>
+        <title>EduHub | Colleges</title>
+      </Helmet>
       <SectionBanner heading="Colleges" subHeading="Top Range Colleges" />
       <div className="w-full my-24 px-4 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {colleges.map((college, index) => (
-          <div key={index} className="card w-full bg-base-100 shadow-xl">
+        {colleges.map((college) => (
+          <div key={college._id} className="card w-full bg-base-100 shadow-xl">
             <figure>
               <img src={college.college_image} alt="Shoes" />
             </figure>
@@ -39,8 +35,8 @@ const AllColleges = () => {
                 </p>
                 <p>
                   <span className="font-semibold">Researches:</span>
-                  {college.researches.map((val, index) => (
-                    <li className="list-decimal" key={index}>
+                  {college.researches.map((val) => (
+                    <li className="list-decimal" key={val._id}>
                       {val.research_name}
                     </li>
                   ))}
@@ -56,7 +52,7 @@ const AllColleges = () => {
               </p>
 
               <div className="card-actions justify-between">
-                <Link to="/admission-form">
+                <Link to={{ pathname: `/admission-form/${college._id}` }}>
                   <button className="btn primary-btn">Get Admission</button>
                 </Link>
                 <button className="btn primary-btn">Details</button>

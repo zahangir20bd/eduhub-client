@@ -18,7 +18,7 @@ const Reviews = () => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    fetch("reviews.json")
+    fetch("http://localhost:5000/reviews")
       .then((res) => res.json())
       .then((data) => {
         setReviews(data);
@@ -42,8 +42,8 @@ const Reviews = () => {
           className="mySwiper"
         >
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
-            {reviews.map((val, index) => (
-              <SwiperSlide key={index}>
+            {reviews.map((val) => (
+              <SwiperSlide key={val._id}>
                 <div className="items shadow bg-[#fcfcfc]">
                   <div className="box flex">
                     <div className="img">

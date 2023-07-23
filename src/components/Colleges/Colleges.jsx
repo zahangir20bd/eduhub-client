@@ -1,32 +1,18 @@
-import { useEffect, useState } from "react";
+import useColleges from "../../hooks/useColleges";
 import SectionTitle from "../Common/SectionTitle/SectionTitle";
 import { Link } from "react-router-dom";
 
 const Colleges = () => {
-  const [colleges, setColleges] = useState([]);
-  // const [showAll, setShowAll] = useState(false);
-
-  useEffect(() => {
-    fetch("colleges.json")
-      .then((res) => res.json())
-      .then((data) => {
-        // console.log(data);
-        setColleges(data);
-      });
-  }, []);
-
-  // const handleShowCollege = () => {
-  //   setShowAll((prev) => !prev);
-  // };
+  const [colleges] = useColleges();
 
   const displayedColleges = colleges.slice(0, 3);
-  console.log(colleges);
+
   return (
     <section className="w-full">
       <SectionTitle section_title="Top Range Colleges" />
       <div className="w-full px-4 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {displayedColleges.map((college, index) => (
-          <div key={index} className="card w-full bg-base-100 shadow-xl">
+        {displayedColleges.map((college) => (
+          <div key={college._id} className="card w-full bg-base-100 shadow-xl">
             <figure>
               <img src={college.college_image} alt="Shoes" />
             </figure>
