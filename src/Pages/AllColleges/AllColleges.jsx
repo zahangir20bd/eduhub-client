@@ -1,10 +1,8 @@
 import { useEffect, useState } from "react";
-import SectionTitle from "../Common/SectionTitle/SectionTitle";
-import { Link } from "react-router-dom";
+import SectionBanner from "../../components/SectionBanner/SectionBanner";
 
-const Colleges = () => {
+const AllColleges = () => {
   const [colleges, setColleges] = useState([]);
-  // const [showAll, setShowAll] = useState(false);
 
   useEffect(() => {
     fetch("colleges.json")
@@ -14,18 +12,11 @@ const Colleges = () => {
         setColleges(data);
       });
   }, []);
-
-  // const handleShowCollege = () => {
-  //   setShowAll((prev) => !prev);
-  // };
-
-  const displayedColleges = colleges.slice(0, 3);
-  console.log(colleges);
   return (
-    <section className="w-full">
-      <SectionTitle section_title="Top Range Colleges" />
-      <div className="w-full px-4 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {displayedColleges.map((college, index) => (
+    <section>
+      <SectionBanner heading="Colleges" subHeading="Top Range Colleges" />
+      <div className="w-full my-24 px-4 mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+        {colleges.map((college, index) => (
           <div key={index} className="card w-full bg-base-100 shadow-xl">
             <figure>
               <img src={college.college_image} alt="Shoes" />
@@ -69,14 +60,8 @@ const Colleges = () => {
           </div>
         ))}
       </div>
-
-      <div className="w-full text-center">
-        <Link to="/colleges">
-          <button className="primary-btn">Show All</button>
-        </Link>
-      </div>
     </section>
   );
 };
 
-export default Colleges;
+export default AllColleges;

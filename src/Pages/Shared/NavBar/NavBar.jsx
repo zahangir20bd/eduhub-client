@@ -4,10 +4,10 @@ const NavBar = () => {
   const navMenu = (
     <>
       <li>
-        <Link>Home</Link>
+        <Link to="/">Home</Link>
       </li>
       <li>
-        <Link>Colleges</Link>
+        <Link to="/colleges">Colleges</Link>
       </li>
       <li>
         <Link>Admission</Link>
@@ -39,7 +39,7 @@ const NavBar = () => {
           </label>
           <ul
             tabIndex={0}
-            className="menu menu-sm bg-base-100 bg-opacity-50 dropdown-content mt-3 z-[1] p-2 shadow rounded-box w-52"
+            className="menu menu-sm z-20 bg-base-100 bg-opacity-50 dropdown-content mt-3  p-2 shadow rounded-box w-52"
           >
             {navMenu}
           </ul>

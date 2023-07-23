@@ -1,0 +1,19 @@
+.section-banner{
+    width: 100%;
+    /* background-color: rgba(0,0,0,0.6); */
+    height: 70vh;
+    position: relative;
+}
+
+.section-banner::before{
+    content: "";
+    background-image: url("../../assets/images/back.webp");
+    background-size: cover;
+    background-position: center top;
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
