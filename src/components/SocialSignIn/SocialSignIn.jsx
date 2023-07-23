@@ -1,75 +1,79 @@
-// import { useLocation, useNavigate } from "react-router-dom";
+/* eslint-disable no-unused-vars */
+import { useLocation, useNavigate } from "react-router-dom";
 // import useAuth from "../Hooks/useAuth";
 
+import { useContext } from "react";
+import { AuthContext } from "../../Providers/AuthProvider";
+
 const SocialSignIn = () => {
-  // const { googleSignIn, gitHubSignIn } = useAuth();
-  // const navigate = useNavigate();
-  // const location = useLocation();
+  const { googleSignIn, gitHubSignIn } = useContext(AuthContext);
+  const navigate = useNavigate();
+  const location = useLocation();
 
-  // const from = location.state?.from?.pathname || "/";
-  // const handleGoogleSignIn = () => {
-  //   googleSignIn()
-  //     .then((result) => {
-  //       const currentUser = result.user;
-  //       navigate(from, { replace: true });
-  //       // console.log(currentUser);
-  //       const newUser = {
-  //         user_name: currentUser.displayName,
-  //         user_email: currentUser.email,
-  //         user_image: currentUser.photoURL,
-  //         user_role: "Student",
-  //       };
-  //       fetch("https://focus-academy-server.vercel.app/users", {
-  //         method: "POST",
-  //         headers: {
-  //           "content-type": "application/json",
-  //         },
-  //         body: JSON.stringify(newUser),
-  //       })
-  //         .then((res) => res.json())
-  //         .then(() => {
-  //           // console.log("response", data);
-  //         });
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // };
+  const from = location.state?.from?.pathname || "/";
+  const handleGoogleSignIn = () => {
+    googleSignIn()
+      .then((result) => {
+        const currentUser = result.user;
+        navigate(from, { replace: true });
+        // console.log(currentUser);
+        const newUser = {
+          user_name: currentUser.displayName,
+          user_email: currentUser.email,
+          user_image: currentUser.photoURL,
+          user_role: "Student",
+        };
+        //   fetch("https://focus-academy-server.vercel.app/users", {
+        //     method: "POST",
+        //     headers: {
+        //       "content-type": "application/json",
+        //     },
+        //     body: JSON.stringify(newUser),
+        //   })
+        //     .then((res) => res.json())
+        //     .then(() => {
+        //       // console.log("response", data);
+        //     });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
-  // const handleGithubSignIn = () => {
-  //   gitHubSignIn()
-  //     .then((result) => {
-  //       const currentUser = result.user;
-  //       navigate(from, { replace: true });
-  //       // console.log(currentUser);
-  //       const newUser = {
-  //         user_name: currentUser.displayName,
-  //         user_email: currentUser.email,
-  //         user_image: currentUser.photoURL,
-  //         user_role: "student",
-  //       };
-  //       fetch("https://focus-academy-server.vercel.app/users", {
-  //         method: "POST",
-  //         headers: {
-  //           "content-type": "application/json",
-  //         },
-  //         body: JSON.stringify(newUser),
-  //       })
-  //         .then((res) => res.json())
-  //         .then(() => {
-  //           // console.log("response", data);
-  //         });
-  //     })
-  //     .catch((error) => {
-  //       console.log(error);
-  //     });
-  // };
+  const handleGithubSignIn = () => {
+    gitHubSignIn()
+      .then((result) => {
+        const currentUser = result.user;
+        navigate(from, { replace: true });
+        // console.log(currentUser);
+        const newUser = {
+          user_name: currentUser.displayName,
+          user_email: currentUser.email,
+          user_image: currentUser.photoURL,
+          user_role: "student",
+        };
+        // fetch("https://focus-academy-server.vercel.app/users", {
+        //   method: "POST",
+        //   headers: {
+        //     "content-type": "application/json",
+        //   },
+        //   body: JSON.stringify(newUser),
+        // })
+        //   .then((res) => res.json())
+        //   .then(() => {
+        //     // console.log("response", data);
+        //   });
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+  };
 
   return (
     <div className="flex mt-4 gap-x-2">
       <button
         type="button"
-        // onClick={handleGoogleSignIn}
+        onClick={handleGoogleSignIn}
         className="flex items-center outline-btn justify-center w-full p-2 border border-gray-600 rounded-md focus:ring-2 focus:ring-offset-1 focus:ring-[#1eb2a6]"
       >
         <svg
@@ -83,7 +87,7 @@ const SocialSignIn = () => {
       </button>
       <button
         type="button"
-        // onClick={handleGithubSignIn}
+        onClick={handleGithubSignIn}
         className="flex outline-btn items-center justify-center w-full p-2 border border-gray-600 rounded-md focus:ring-2 focus:ring-offset-1 focus:ring-[#1eb2a6]"
       >
         <svg
