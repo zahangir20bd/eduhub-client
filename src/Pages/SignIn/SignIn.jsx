@@ -18,7 +18,7 @@ const SignIn = () => {
   const navigate = useNavigate();
   const location = useLocation();
 
-  const { SignIn } = useContext(AuthContext);
+  const { logIn } = useContext(AuthContext);
 
   const from = location.state?.from?.pathname || "/";
 
@@ -36,23 +36,23 @@ const SignIn = () => {
 
   // Sign In Handler
   const handleSignIn = (data) => {
-    console.log(data.email, data.password);
-    // SignIn(data.email, data.password)
-    //   .then((result) => {
-    //     setError("");
-    //     Swal.fire({
-    //       position: "center",
-    //       icon: "success",
-    //       title: "Sign In Successful",
-    //       showConfirmButton: false,
-    //       timer: 1500,
-    //     });
-    //     reset();
-    //     navigate(from, { replace: true });
-    //   })
-    //   .catch((error) => {
-    //     setError(error.message);
-    //   });
+    console.log(data);
+    logIn(data.email, data.password)
+      .then((result) => {
+        setError("");
+        Swal.fire({
+          position: "center",
+          icon: "success",
+          title: "Sign In Successful",
+          showConfirmButton: false,
+          timer: 1500,
+        });
+        reset();
+        navigate(from, { replace: true });
+      })
+      .catch((error) => {
+        setError(error.message);
+      });
   };
 
   return (

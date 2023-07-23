@@ -1,6 +1,6 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { Helmet } from "react-helmet-async";
 import { useForm } from "react-hook-form";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
@@ -8,10 +8,13 @@ import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
 
 import SocialSignIn from "../../components/SocialSignIn/SocialSignIn";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const SignUp = () => {
   const [viewPassword, setViewPassword] = useState(false);
   const [viewConfirmPassword, setViewConfirmPassword] = useState(false);
+
+  const { createUser } = useContext(AuthContext);
   const {
     register,
     handleSubmit,
@@ -30,8 +33,14 @@ const SignUp = () => {
   const confirmPassword = watch("confirm_password");
   const isMatched = password === confirmPassword;
 
-  const onSubmit = (data) => {
-    // console.log("Data from SignUP", data);
+  const handleSignUp = (data) => {
+    console.log("Data from SignUP", data);
+
+    createUser(data.email, data.password).then((result) => {
+      const currentUser = result.user;
+      console.log(currentUser);
+    });
+
     // createUser(data.email, data.password).then((result) => {
     //   const currentUser = result.user;
     //   // console.log(currentUser);
@@ -93,7 +102,7 @@ const SignUp = () => {
           <h1 className="text-3xl font-semibold text-center text-[#1eb2a6] uppercase">
             Sign Up
           </h1>
-          <form onSubmit={handleSubmit(onSubmit)} className="mt-6">
+          <form onSubmit={handleSubmit(handleSignUp)} className="mt-6">
             <div className="mb-2">
               <label className="block text-sm font-semibold text-[#1eb2a6]">
                 Name*

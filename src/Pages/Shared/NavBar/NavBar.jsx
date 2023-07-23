@@ -1,7 +1,16 @@
 import { Link } from "react-router-dom";
 import logo from "../../../assets/images/logo.png";
+import { useContext } from "react";
+import { AuthContext } from "../../../Providers/AuthProvider";
 
 const NavBar = () => {
+  const { user, logOut } = useContext(AuthContext);
+
+  const handleSignOut = () => {
+    logOut()
+      .then(() => {})
+      .catch((error) => console.log(error));
+  };
   const navMenu = (
     <>
       <li>
@@ -13,9 +22,11 @@ const NavBar = () => {
       <li>
         <Link to="/admission">Admission</Link>
       </li>
-      <li>
-        <Link>My College</Link>
-      </li>
+      {user && (
+        <li>
+          <Link>My College</Link>
+        </li>
+      )}
     </>
   );
   return (
@@ -67,9 +78,15 @@ const NavBar = () => {
             />
           </div>
         </div>
-        <Link to="/signin" className="btn btn-ghost primary-btn">
-          Sign In
-        </Link>
+        {user ? (
+          <div onClick={handleSignOut} className="btn btn-ghost primary-btn">
+            Sign Out
+          </div>
+        ) : (
+          <Link to="/signin" className="btn btn-ghost primary-btn">
+            Sign In
+          </Link>
+        )}
       </div>
     </nav>
   );
