@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import SectionBanner from "../../components/SectionBanner/SectionBanner";
+import { Link } from "react-router-dom";
 
 const AllColleges = () => {
   const [colleges, setColleges] = useState([]);
@@ -53,7 +54,11 @@ const AllColleges = () => {
                   </span>
                 ))}
               </p>
-              <div className="card-actions justify-end">
+
+              <div className="card-actions justify-between">
+                <Link to="/admission-form">
+                  <button className="btn primary-btn">Get Admission</button>
+                </Link>
                 <button className="btn primary-btn">Details</button>
               </div>
             </div>

@@ -10,7 +10,7 @@ const Hero = () => {
           <div className="row">
             <Heading
               subtitle="WELCOME TO EDUHUB"
-              title="Chose your desired College."
+              title="Choose your desired College."
             />
             <p className="w-96 ml-2 md:ml-40 text-xl">
               Far far away, behind the word mountains, far from the countries
