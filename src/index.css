@@ -25,6 +25,10 @@ button {
     color: #fff;
   }
 
+  .outline-btn{
+    border: 2px solid #1eb2a6;
+  }
+
   .primary-btn:hover {
     background-color: #16968b;
     color: #fff;

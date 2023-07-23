@@ -1,0 +1,58 @@
+[
+    {
+        "type": "Networking",
+        "views": "999",
+        "author": "Giovanni Pau",
+        "title": "Elephant Flows Detection Using Deep Neural Network, Convolutional Neural Network, Long Short-Term Memory, and Autoencoder",
+        "links": "https://www.hindawi.com/journals/jcnc/2023/1495642/"
+    },
+    {
+        "type": "Software",
+        "views": "1000",
+        "author": "Wouter Groeneveld",
+        "title": "Identifying Non-Technical Skill Gaps in Software Engineering Education: What Experts Expect But Students Don’t Learn",
+        "links": "https://www.sciencegate.app/document/10.1145/3464431"
+    },
+    {
+        "type": "Web Development",
+        "views": "800",
+        "author": "S. N. Lyubyashenko",
+        "title": "Analysis of Russian Segment of the Web Development Market Operating Online on Upwork",
+        "links": "https://www.sciencegate.app/document/10.34020/2073-6495-2021-4-093-103"
+    },
+    {
+        "type": "Networking",
+        "views": "1200",
+        "author": "Roberto Nardone",
+        "title": "Evaluation of a High-Accuracy Indoor-Positioning System with Wi-Fi Time of Flight (ToF) and Deep Learning",
+        "links": "https://www.hindawi.com/journals/jcnc/2023/6777759/"
+    },
+    {
+        "type": "Networking",
+        "views": "980",
+        "author": "Ihsan Ali",
+        "title": "Novel Framework for Secure Data Aggregation in Precision Agriculture with Extensive Energy Efficiency",
+        "links": "https://www.hindawi.com/journals/jcnc/2023/5926294/"
+    },
+    {
+        "type": "Software",
+        "views": "1000",
+        "author": "Kathy Beckman",
+        "title": "Directory of Industry and University Collaborations with a Focus on Software Engineering Education and Training, Version 7",
+        "links": "https://www.sciencegate.app/document/10.21236/ada360577"
+    },
+    {
+        "type": "Software",
+        "views": "900",
+        "author": "Orville Jones",
+        "title": "Software Product Design: An Organizing Concept for Software Engineering Education",
+        "links": "https://www.sciencegate.app/document/10.1177/026839629000500107"
+    },
+    {
+        "type": "Web Development",
+        "views": "800",
+        "author": "S. N. Lyubyashenko",
+        "title": "Web Services Architecture Model to Support Distributed Systems",
+        "links": "http://jsju.org/index.php/journal/article/view/409"
+    }
+]

@@ -32,7 +32,7 @@ const Colleges = () => {
             <div className="card-body">
               <h2 className="card-title">{college.college_name}</h2>
               <p>
-                <span className="font-semibold">Admission Dates:</span>{" "}
+                <span className="font-semibold">Admission Dates: </span>
                 {college.admission_dates}
               </p>
               <div className="grid grid-cols-2 gap-3">
@@ -75,7 +75,6 @@ const Colleges = () => {
           </button>
         </div>
       )}
-      <h2>This is colleges Section</h2>
     </section>
   );
 };
