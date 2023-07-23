@@ -1,7 +1,7 @@
 /* eslint-disable no-unused-vars */
 /* eslint-disable react/no-unescaped-entities */
 import { Helmet } from "react-helmet-async";
-import { useState } from "react";
+import { useContext, useState } from "react";
 import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { Link, useLocation, useNavigate } from "react-router-dom";
 import Swal from "sweetalert2";
@@ -9,6 +9,7 @@ import { useForm } from "react-hook-form";
 
 // import useAuth from "../../Hooks/useAuth";
 import SocialSignIn from "../../components/SocialSignIn/SocialSignIn";
+import { AuthContext } from "../../Providers/AuthProvider";
 
 const SignIn = () => {
   const [passwordVisible, setPasswordVisible] = useState(false);
@@ -16,6 +17,8 @@ const SignIn = () => {
   // const { signIn } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
+
+  const { SignIn } = useContext(AuthContext);
 
   const from = location.state?.from?.pathname || "/";
 
@@ -32,24 +35,25 @@ const SignIn = () => {
   } = useForm();
 
   // Sign In Handler
-  // const handleSignIn = (data) => {
-  //   signIn(data.email, data.password)
-  //     .then((result) => {
-  //       setError("");
-  //       Swal.fire({
-  //         position: "center",
-  //         icon: "success",
-  //         title: "Sign In Successful",
-  //         showConfirmButton: false,
-  //         timer: 1500,
-  //       });
-  //       reset();
-  //       navigate(from, { replace: true });
-  //     })
-  //     .catch((error) => {
-  //       setError(error.message);
-  //     });
-  // };
+  const handleSignIn = (data) => {
+    console.log(data.email, data.password);
+    // SignIn(data.email, data.password)
+    //   .then((result) => {
+    //     setError("");
+    //     Swal.fire({
+    //       position: "center",
+    //       icon: "success",
+    //       title: "Sign In Successful",
+    //       showConfirmButton: false,
+    //       timer: 1500,
+    //     });
+    //     reset();
+    //     navigate(from, { replace: true });
+    //   })
+    //   .catch((error) => {
+    //     setError(error.message);
+    //   });
+  };
 
   return (
     <section className="pt-1">
@@ -62,7 +66,7 @@ const SignIn = () => {
             Sign In
           </h1>
           {/* onSubmit={handleSubmit(handleSignIn)} */}
-          <form className="mt-6">
+          <form onSubmit={handleSubmit(handleSignIn)} className="mt-6">
             <div className="mb-2">
               <label className="block text-sm font-semibold text-[#1eb2a6]">
                 Email
