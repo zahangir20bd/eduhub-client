@@ -14,7 +14,7 @@ const Colleges = () => {
         {displayedColleges.map((college) => (
           <div key={college._id} className="card w-full bg-base-100 shadow-xl">
             <figure>
-              <img src={college.college_image} alt="Shoes" />
+              <img src={college.college_image} alt="College" />
             </figure>
             <div className="card-body">
               <h2 className="card-title">{college.college_name}</h2>
@@ -49,7 +49,9 @@ const Colleges = () => {
                 ))}
               </p>
               <div className="card-actions justify-end">
-                <button className="btn primary-btn">Details</button>
+                <Link to={{ pathname: `/college/${college?._id}` }}>
+                  <button className="btn primary-btn">Details</button>
+                </Link>
               </div>
             </div>
           </div>

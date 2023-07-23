@@ -67,7 +67,9 @@ const NavBar = () => {
             />
           </div>
         </div>
-        <Link className="btn btn-ghost primary-btn">Login</Link>
+        <Link to="/signin" className="btn btn-ghost primary-btn">
+          Sign In
+        </Link>
       </div>
     </nav>
   );
