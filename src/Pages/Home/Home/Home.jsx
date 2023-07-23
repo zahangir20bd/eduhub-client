@@ -1,7 +1,11 @@
+import Colleges from "../../../components/Colleges/Colleges";
+import Hero from "../../../components/Hero/Hero";
+
 const Home = () => {
   return (
     <div>
-      <h2>This is Home</h2>
+      <Hero />
+      <Colleges />
     </div>
   );
 };

@@ -18,7 +18,7 @@ const NavBar = () => {
     </>
   );
   return (
-    <navbar className="navbar bg-base-100">
+    <nav className="navbar bg-base-100">
       <div className="navbar-start">
         <div className="dropdown">
           <label tabIndex={0} className="btn btn-ghost lg:hidden">
@@ -68,7 +68,7 @@ const NavBar = () => {
         </div>
         <Link className="btn btn-ghost primary-btn">Login</Link>
       </div>
-    </navbar>
+    </nav>
   );
 };
 

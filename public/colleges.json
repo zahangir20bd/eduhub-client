@@ -1,0 +1,266 @@
+[
+    {
+        "college_image": "https://i.ibb.co/PCmBk78/Harvard-University.jpg",
+        "college_name": "Harvard University",
+        "admission_dates": "August 1 - August 15",
+        "admission_process": "Online application, entrance exam, interview",
+        "events": [
+            {
+                "event_name": "Freshers' Welcome",
+                "event_details": "Embark on a magical journey with a captivating Freshers' Welcome, where dreams come to life."
+            },
+            {
+                "event_name": "College Fest",
+                "event_details": "Dive into a realm of creativity and innovation at our College Fest, where imagination knows no bounds."
+            },
+            {
+                "event_name": "Graduation Day",
+                "event_details": "Celebrate the triumphant accomplishments of our graduates as they spread their wings to soar the skies."
+            }
+        ],
+        "researches": [
+            {
+                "research_name": "Advanced Robotics",
+                "research_details": "Unlock the secrets of sentient machines and AI-driven robotics, envisioning a future where technology and humanity coexist in harmony."
+            },
+            {
+                "research_name": "Environmental Sustainability",
+                "research_details": "Embark on an enchanting quest to heal Mother Earth through sustainable practices and eco-conscious innovations, fostering a greener and healthier planet."
+            }
+        ],
+        "sports": [
+            {
+                "sports_name": "Football",
+                "sports_details": "Experience the thrill of the beautiful game as athletes display their skills in epic clashes, united by a passion for victory and the love of the sport. Join us for captivating matches that ignite the spirit of competition."
+            },
+            {
+                "sports_name": "Basketball",
+                "sports_details": "Soar to new heights on the basketball court, where players defy gravity with breathtaking dunks and masterful ball-handling. Witness the electrifying energy as teams battle for dominance in intense, fast-paced games."
+            },
+            {
+                "sports_name": "Swimming",
+                "sports_details": "Dive into a world of elegance and precision as swimmers glide through the water with graceful strokes. Join us for aquatic marvels, where every race showcases the pursuit of excellence and breaking of records."
+            }
+        ]
+    },
+    {
+        "college_image": "https://i.ibb.co/89DWP1T/University-of-Oxford.jpg",
+        "college_name": "University of Oxford",
+        "admission_dates": "September 1 - September 30",
+        "admission_process": "Offline application, merit-based selection",
+        "events": [
+            {
+                "event_name": "Orientation Program",
+                "event_details": "Embark on a wondrous adventure through our Orientation Program, where new students uncover the essence of college life."
+            },
+            {
+                "event_name": "Annual Sports Meet",
+                "event_details": "Witness exhilarating displays of skill and camaraderie as student athletes clash in epic battles during our Annual Sports Meet."
+            },
+            {
+                "event_name": "Cultural Night",
+                "event_details": "Be dazzled by a starlit spectacle of artistic brilliance, where performances from around the world come together in one breathtaking Cultural Night."
+            }
+        ],
+        "researches": [
+            {
+                "research_name": "Biomedical Engineering",
+                "research_details": "Embark on a groundbreaking expedition to create innovative medical marvels, merging technology and biology to heal and enhance lives."
+            },
+            {
+                "research_name": "Renewable Energy",
+                "research_details": "Unleash the power of the elements as we journey towards a future sustained by renewable energies, dancing with the wind and basking in the sun's radiance."
+            }
+        ],
+        "sports": [
+            {
+                "sports_name": "Cricket",
+                "sports_details": "Join the cricketing frenzy as players wield their willows, showcasing skills that thrill and inspire millions. Experience the passion and glory of this beloved sport in a captivating display of talent and teamwork."
+            },
+            {
+                "sports_name": "Tennis",
+                "sports_details": "Enter the world of precision and finesse, where players duel on the tennis court with relentless determination. Witness breathtaking rallies and incredible shot-making that redefine the limits of human athleticism."
+            },
+            {
+                "sports_name": "Badminton",
+                "sports_details": "Experience the speed and agility of badminton, where shuttlecocks zip across the court and players leap with astonishing grace. Join us for an enchanting showcase of talent and sportsmanship."
+            }
+        ]
+    },
+    {
+        "college_image": "https://i.ibb.co/2MZvnnX/sfit.jpg",
+        "college_name": "ETH Zurich (Swiss Federal Institute of Technology)",
+        "admission_dates": "July 1 - July 31",
+        "admission_process": "Online application, written test, group discussion",
+        "events": [
+            {
+                "event_name": "Foundation Day",
+                "event_details": "Embark on a time-traveling celebration of our college's founding, where the past, present, and future converge in a joyous harmony."
+            },
+            {
+                "event_name": "Tech Symposium",
+                "event_details": "Witness an extraordinary showcase of technological wonders and visionary brilliance during our grand Tech Symposium."
+            },
+            {
+                "event_name": "Literary Week",
+                "event_details": "Embark on an odyssey of words, where imagination and prose intertwine, and literary enthusiasts pen their tales of wonder."
+            }
+        ],
+        "researches": [
+            {
+                "research_name": "Artificial Intelligence",
+                "research_details": "Embark on an awe-inspiring quest into the realm of Artificial Intelligence, where machines transcend boundaries, shaping a future of boundless possibilities."
+            },
+            {
+                "research_name": "Space Exploration",
+                "research_details": "Embark on an interstellar odyssey, venturing into the cosmic abyss, unlocking the universe's enigmas, and embracing the cosmos as our eternal frontier."
+            }
+        ],
+        "sports": [
+            {
+                "sports_name": "Volleyball",
+                "sports_details": "Feel the energy surge as players soar to block and spike in the thrilling game of volleyball. Join us for exciting matches where teamwork and strategy collide, creating moments of triumph and excitement."
+            },
+            {
+                "sports_name": "Athletics",
+                "sports_details": "Witness athletes push the boundaries of human potential in a breathtaking display of speed, strength, and endurance. Experience the passion of athletics as competitors strive for glory in each stride and leap."
+            },
+            {
+                "sports_name": "Chess",
+                "sports_details": "Enter the realm of intellect and strategy, where minds battle on a checkered battlefield. Immerse yourself in the world of chess, where each move holds the key to victory or defeat."
+            }
+        ]
+    },
+    {
+        "college_image": "https://i.ibb.co/GRtdz4H/NUS.jpg",
+        "college_name": "National University of Singapore (NUS)",
+        "admission_dates": "July 1 - July 31",
+        "admission_process": "Online application, written test, group discussion",
+        "events": [
+            {
+                "event_name": "Foundation Day",
+                "event_details": "Embark on a time-traveling celebration of our college's founding, where the past, present, and future converge in a joyous harmony."
+            },
+            {
+                "event_name": "Tech Symposium",
+                "event_details": "Witness an extraordinary showcase of technological wonders and visionary brilliance during our grand Tech Symposium."
+            },
+            {
+                "event_name": "Literary Week",
+                "event_details": "Embark on an odyssey of words, where imagination and prose intertwine, and literary enthusiasts pen their tales of wonder."
+            }
+        ],
+        "researches": [
+            {
+                "research_name": "Artificial Intelligence",
+                "research_details": "Embark on an awe-inspiring quest into the realm of Artificial Intelligence, where machines transcend boundaries, shaping a future of boundless possibilities."
+            },
+            {
+                "research_name": "Space Exploration",
+                "research_details": "Embark on an interstellar odyssey, venturing into the cosmic abyss, unlocking the universe's enigmas, and embracing the cosmos as our eternal frontier."
+            }
+        ],
+        "sports": [
+            {
+                "sports_name": "Volleyball",
+                "sports_details": "Feel the energy surge as players soar to block and spike in the thrilling game of volleyball. Join us for exciting matches where teamwork and strategy collide, creating moments of triumph and excitement."
+            },
+            {
+                "sports_name": "Athletics",
+                "sports_details": "Witness athletes push the boundaries of human potential in a breathtaking display of speed, strength, and endurance. Experience the passion of athletics as competitors strive for glory in each stride and leap."
+            },
+            {
+                "sports_name": "Chess",
+                "sports_details": "Enter the realm of intellect and strategy, where minds battle on a checkered battlefield. Immerse yourself in the world of chess, where each move holds the key to victory or defeat."
+            }
+        ]
+    },
+    {
+        "college_image": "https://i.ibb.co/kBYCB3Q/University-of-Melbourne.jpg",
+        "college_name": "University of Melbourne",
+        "admission_dates": "July 1 - July 31",
+        "admission_process": "Online application, written test, group discussion",
+        "events": [
+            {
+                "event_name": "Foundation Day",
+                "event_details": "Embark on a time-traveling celebration of our college's founding, where the past, present, and future converge in a joyous harmony."
+            },
+            {
+                "event_name": "Tech Symposium",
+                "event_details": "Witness an extraordinary showcase of technological wonders and visionary brilliance during our grand Tech Symposium."
+            },
+            {
+                "event_name": "Literary Week",
+                "event_details": "Embark on an odyssey of words, where imagination and prose intertwine, and literary enthusiasts pen their tales of wonder."
+            }
+        ],
+        "researches": [
+            {
+                "research_name": "Artificial Intelligence",
+                "research_details": "Embark on an awe-inspiring quest into the realm of Artificial Intelligence, where machines transcend boundaries, shaping a future of boundless possibilities."
+            },
+            {
+                "research_name": "Space Exploration",
+                "research_details": "Embark on an interstellar odyssey, venturing into the cosmic abyss, unlocking the universe's enigmas, and embracing the cosmos as our eternal frontier."
+            }
+        ],
+        "sports": [
+            {
+                "sports_name": "Volleyball",
+                "sports_details": "Feel the energy surge as players soar to block and spike in the thrilling game of volleyball. Join us for exciting matches where teamwork and strategy collide, creating moments of triumph and excitement."
+            },
+            {
+                "sports_name": "Athletics",
+                "sports_details": "Witness athletes push the boundaries of human potential in a breathtaking display of speed, strength, and endurance. Experience the passion of athletics as competitors strive for glory in each stride and leap."
+            },
+            {
+                "sports_name": "Chess",
+                "sports_details": "Enter the realm of intellect and strategy, where minds battle on a checkered battlefield. Immerse yourself in the world of chess, where each move holds the key to victory or defeat."
+            }
+        ]
+    },
+    {
+        "college_image": "https://i.ibb.co/drPZpvG/University-of-Tokyo.jpg",
+        "college_name": "University of Tokyo",
+        "admission_dates": "July 1 - July 31",
+        "admission_process": "Online application, written test, group discussion",
+        "events": [
+            {
+                "event_name": "Foundation Day",
+                "event_details": "Embark on a time-traveling celebration of our college's founding, where the past, present, and future converge in a joyous harmony."
+            },
+            {
+                "event_name": "Tech Symposium",
+                "event_details": "Witness an extraordinary showcase of technological wonders and visionary brilliance during our grand Tech Symposium."
+            },
+            {
+                "event_name": "Literary Week",
+                "event_details": "Embark on an odyssey of words, where imagination and prose intertwine, and literary enthusiasts pen their tales of wonder."
+            }
+        ],
+        "researches": [
+            {
+                "research_name": "Artificial Intelligence",
+                "research_details": "Embark on an awe-inspiring quest into the realm of Artificial Intelligence, where machines transcend boundaries, shaping a future of boundless possibilities."
+            },
+            {
+                "research_name": "Space Exploration",
+                "research_details": "Embark on an interstellar odyssey, venturing into the cosmic abyss, unlocking the universe's enigmas, and embracing the cosmos as our eternal frontier."
+            }
+        ],
+        "sports": [
+            {
+                "sports_name": "Volleyball",
+                "sports_details": "Feel the energy surge as players soar to block and spike in the thrilling game of volleyball. Join us for exciting matches where teamwork and strategy collide, creating moments of triumph and excitement."
+            },
+            {
+                "sports_name": "Athletics",
+                "sports_details": "Witness athletes push the boundaries of human potential in a breathtaking display of speed, strength, and endurance. Experience the passion of athletics as competitors strive for glory in each stride and leap."
+            },
+            {
+                "sports_name": "Chess",
+                "sports_details": "Enter the realm of intellect and strategy, where minds battle on a checkered battlefield. Immerse yourself in the world of chess, where each move holds the key to victory or defeat."
+            }
+        ]
+    }
+]
