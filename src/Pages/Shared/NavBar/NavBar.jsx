@@ -1,4 +1,5 @@
 import { Link } from "react-router-dom";
+import logo from "../../../assets/images/logo.png";
 
 const NavBar = () => {
   const navMenu = (
@@ -47,7 +48,7 @@ const NavBar = () => {
         <div>
           <img
             className="btn btn-ghost normal-case text-xl w-36 p-1"
-            src="logo.png"
+            src={logo}
             alt="Logo"
           />
         </div>

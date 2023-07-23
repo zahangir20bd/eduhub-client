@@ -1,9 +1,14 @@
 import { Helmet } from "react-helmet-async";
 import { useParams } from "react-router-dom";
+import useColleges from "../../hooks/useColleges";
 
 const AdmissionForm = () => {
   const { id } = useParams();
-  console.log(id);
+  const [colleges] = useColleges();
+
+  const selectCollege = colleges.find((college) => college._id === id);
+  //   console.log(id);
+  //   console.log(selectCollege);
   return (
     <section>
       <Helmet>
@@ -21,7 +26,7 @@ const AdmissionForm = () => {
               </label>
               <input
                 type="text"
-                placeholder="College Name"
+                defaultValue={selectCollege?.college_name}
                 className="block w-full px-4 py-2 mt-2 text-[#0f776e] bg-white border rounded-md focus:border-[#1eb2a6] focus:ring-[#1eb2a6] focus:outline-none focus:ring focus:ring-opacity-40"
               />
             </div>

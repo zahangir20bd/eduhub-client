@@ -35,8 +35,8 @@ const AllColleges = () => {
                 </p>
                 <p>
                   <span className="font-semibold">Researches:</span>
-                  {college.researches.map((val) => (
-                    <li className="list-decimal" key={val._id}>
+                  {college.researches.map((val, index) => (
+                    <li className="list-decimal" key={index}>
                       {val.research_name}
                     </li>
                   ))}
