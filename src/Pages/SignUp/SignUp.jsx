@@ -14,7 +14,7 @@ const SignUp = () => {
   const [viewPassword, setViewPassword] = useState(false);
   const [viewConfirmPassword, setViewConfirmPassword] = useState(false);
 
-  const { createUser } = useContext(AuthContext);
+  const { createUser, updateUserProfile } = useContext(AuthContext);
   const {
     register,
     handleSubmit,
@@ -39,6 +39,23 @@ const SignUp = () => {
     createUser(data.email, data.password).then((result) => {
       const currentUser = result.user;
       console.log(currentUser);
+      updateUserProfile(data.name, data.photo, data.phone_number)
+        .then(() => {
+          navigate(from, { replace: true });
+          const newUser = {
+            user_name: data.name,
+            user_email: data.email,
+            user_image: data.photo,
+            user_role: "Student",
+            gender: data.gender,
+            date_of_birth: data.date_of_birth,
+            phone_number: data.phone_number,
+            address: data.address,
+          };
+        })
+        .catch((error) => {
+          console.log(error);
+        });
     });
 
     // createUser(data.email, data.password).then((result) => {

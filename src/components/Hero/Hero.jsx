@@ -17,7 +17,7 @@ const Hero = () => {
               Vokalia and Consonantia, there live the blind texts.
             </p>
             <div className="button ml-2 md:ml-40">
-              <button className="primary-btn flex items-center justify-center gap-2">
+              <button className=" primary-btn flex items-center justify-center gap-2">
                 GET STARTED NOW <FaLongArrowAltRight />
               </button>
             </div>

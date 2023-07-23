@@ -7,6 +7,7 @@ import AdmissionForm from "../components/AdmissionForm/AdmissionForm";
 import CollegeDetails from "../components/CollegeDetails/CollegeDetails";
 import SignUp from "../Pages/SignUp/SignUp";
 import SignIn from "../Pages/SignIn/SignIn";
+import PrivateRoute from "./PrivateRoute";
 
 export const router = createBrowserRouter([
   {
@@ -31,7 +32,11 @@ export const router = createBrowserRouter([
       },
       {
         path: "/admission-form/:id",
-        element: <AdmissionForm />,
+        element: (
+          <PrivateRoute>
+            <AdmissionForm />
+          </PrivateRoute>
+        ),
       },
       {
         path: "/signin",
