@@ -25,7 +25,7 @@ const Reviews = () => {
       });
   }, []);
 
-  console.log(reviews);
+  // console.log(reviews);
 
   return (
     <section className="testimonal padding px-2 md:px-4">
@@ -55,7 +55,8 @@ const Reviews = () => {
                     </div>
                     <div className="name">
                       <h2 className="text-xl font-bold">{val.reviewer_name}</h2>
-                      <span>{val.reviewer_role}</span>
+                      <span>{val.reviewer_role}</span> <br />
+                      <span>Rating: {val.ratings}</span>
                     </div>
                   </div>
                   <p>{val.review}</p>
@@ -63,15 +64,6 @@ const Reviews = () => {
               </SwiperSlide>
             ))}
           </div>
-          {/* <SwiperSlide>Slide 1</SwiperSlide>
-        <SwiperSlide>Slide 2</SwiperSlide>
-        <SwiperSlide>Slide 3</SwiperSlide>
-        <SwiperSlide>Slide 4</SwiperSlide>
-        <SwiperSlide>Slide 5</SwiperSlide>
-        <SwiperSlide>Slide 6</SwiperSlide>
-        <SwiperSlide>Slide 7</SwiperSlide>
-        <SwiperSlide>Slide 8</SwiperSlide>
-        <SwiperSlide>Slide 9</SwiperSlide> */}
         </Swiper>
       </div>
     </section>

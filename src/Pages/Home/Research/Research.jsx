@@ -19,7 +19,7 @@ const Research = () => {
 
   const displayedResearch = showAll ? researches : researches.slice(0, 4);
 
-  console.log(displayedResearch);
+  // console.log(displayedResearch);
 
   return (
     <section className="mx-2 md:mx-4">
