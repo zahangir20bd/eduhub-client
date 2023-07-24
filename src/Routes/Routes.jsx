@@ -9,6 +9,8 @@ import SignUp from "../Pages/SignUp/SignUp";
 import SignIn from "../Pages/SignIn/SignIn";
 import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
+import MyCollege from "../Pages/MyCollege/MyCollege";
+import AddReview from "../components/AddReview/AddReview";
 
 export const router = createBrowserRouter([
   {
@@ -28,6 +30,22 @@ export const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <CollegeDetails />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/mycollege",
+        element: (
+          <PrivateRoute>
+            <MyCollege />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/addreview/:id",
+        element: (
+          <PrivateRoute>
+            <AddReview />
           </PrivateRoute>
         ),
       },

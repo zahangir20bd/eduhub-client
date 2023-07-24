@@ -38,10 +38,10 @@ const SignUp = () => {
 
     createUser(data.email, data.password).then((result) => {
       const currentUser = result.user;
+      navigate(from, { replace: true });
       console.log(currentUser);
       updateUserProfile(data.name, data.photo, data.phone_number)
         .then(() => {
-          navigate(from, { replace: true });
           const newUser = {
             user_name: data.name,
             user_email: data.email,
