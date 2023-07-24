@@ -5,7 +5,7 @@ const useColleges = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch("http://localhost:5000/colleges")
+    fetch("https://edu-hub-server-liart.vercel.app/colleges")
       .then((res) => res.json())
       .then((data) => {
         // console.log(data);

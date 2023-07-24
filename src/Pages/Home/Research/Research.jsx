@@ -8,7 +8,7 @@ const Research = () => {
   const [showAll, setShowAll] = useState(false);
 
   useState(() => {
-    fetch("http://localhost:5000/journals")
+    fetch("https://edu-hub-server-liart.vercel.app/journals")
       .then((res) => res.json())
       .then((data) => setResearches(data));
   }, []);

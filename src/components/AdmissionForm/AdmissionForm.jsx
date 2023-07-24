@@ -47,7 +47,7 @@ const AdmissionForm = () => {
     };
     console.log(admissionInfo);
 
-    fetch("http://localhost:5000/admissions", {
+    fetch("https://edu-hub-server-liart.vercel.app/admissions", {
       method: "POST",
       headers: {
         "content-type": "application/json",

@@ -18,7 +18,7 @@ const Reviews = () => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/reviews")
+    fetch("https://edu-hub-server-liart.vercel.app/reviews")
       .then((res) => res.json())
       .then((data) => {
         setReviews(data);
@@ -55,8 +55,8 @@ const Reviews = () => {
                     </div>
                     <div className="name">
                       <h2 className="text-xl font-bold">{val.reviewer_name}</h2>
-                      <span>{val.reviewer_role}</span> <br />
-                      <span>Rating: {val.ratings}</span>
+                      <span>{val.reviewer_role}</span>
+                      <span className="ml-5">Rating: {val.ratings}</span>
                     </div>
                   </div>
                   <p>{val.review}</p>
