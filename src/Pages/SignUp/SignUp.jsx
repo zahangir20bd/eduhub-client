@@ -52,7 +52,7 @@ const SignUp = () => {
             phone_number: data.phone_number,
             address: data.address,
           };
-          fetch("http://localhost:5000/users", {
+          fetch("https://edu-hub-server-liart.vercel.app/users", {
             method: "POST",
             headers: {
               "content-type": "application/json",
@@ -78,49 +78,6 @@ const SignUp = () => {
           console.log(error);
         });
     });
-
-    // createUser(data.email, data.password).then((result) => {
-    //   const currentUser = result.user;
-    //   // console.log(currentUser);
-    //   updateUserProfile(data.name, data.photo, data.phone_number)
-    //     .then(() => {
-    //       const newUser = {
-    //         user_name: data.name,
-    //         user_email: data.email,
-    //         user_image: data.photo,
-    //         user_role: "Student",
-    //         gender: data.gender,
-    //         date_of_birth: data.date_of_birth,
-    //         phone_number: data.phone_number,
-    //         address: data.address,
-    //       };
-    //       fetch("https://focus-academy-server.vercel.app/users", {
-    //         method: "POST",
-    //         headers: {
-    //           "content-type": "application/json",
-    //         },
-    //         body: JSON.stringify(newUser),
-    //       })
-    //         .then((res) => res.json())
-    //         .then((data) => {
-    //           // console.log("response", data);
-    //           if (data.insertedId) {
-    //             reset();
-    //             Swal.fire({
-    //               position: "center",
-    //               icon: "success",
-    //               title: "Sign Up Successful",
-    //               showConfirmButton: false,
-    //               timer: 1500,
-    //             });
-    //             navigate(from, { replace: true });
-    //           }
-    //         });
-    //     })
-    //     .catch((error) => {
-    //       console.log(error);
-    //     });
-    // });
   };
 
   const toggleViewPassword = () => {

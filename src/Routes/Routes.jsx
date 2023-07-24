@@ -11,6 +11,8 @@ import PrivateRoute from "./PrivateRoute";
 import ErrorPage from "../components/ErrorPage/ErrorPage";
 import MyCollege from "../Pages/MyCollege/MyCollege";
 import AddReview from "../components/AddReview/AddReview";
+import Profile from "../components/Profile/Profile";
+import UpdateProfile from "../components/UpdateProfile/UpdateProfile";
 
 export const router = createBrowserRouter([
   {
@@ -38,6 +40,22 @@ export const router = createBrowserRouter([
         element: (
           <PrivateRoute>
             <MyCollege />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/profile",
+        element: (
+          <PrivateRoute>
+            <Profile />
+          </PrivateRoute>
+        ),
+      },
+      {
+        path: "/editprofile/:id",
+        element: (
+          <PrivateRoute>
+            <UpdateProfile />
           </PrivateRoute>
         ),
       },

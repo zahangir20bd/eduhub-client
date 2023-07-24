@@ -22,7 +22,7 @@ const SocialSignIn = () => {
           user_image: currentUser.photoURL,
           user_role: "Student",
         };
-        fetch("http://localhost:5000/users", {
+        fetch("https://edu-hub-server-liart.vercel.app/users", {
           method: "POST",
           headers: {
             "content-type": "application/json",
@@ -52,7 +52,7 @@ const SocialSignIn = () => {
           user_image: currentUser.photoURL,
           user_role: "student",
         };
-        fetch("http://localhost:5000/users", {
+        fetch("https://edu-hub-server-liart.vercel.app/users", {
           method: "POST",
           headers: {
             "content-type": "application/json",

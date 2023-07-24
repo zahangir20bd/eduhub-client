@@ -67,11 +67,13 @@ const NavBar = () => {
           </ul>
         </div>
         <div>
-          <img
-            className="btn btn-ghost normal-case text-xl w-36 p-1"
-            src={logo}
-            alt="Logo"
-          />
+          <Link to="/">
+            <img
+              className="btn btn-ghost normal-case text-xl w-36 p-1"
+              src={logo}
+              alt="Logo"
+            />
+          </Link>
         </div>
       </div>
       <div className="navbar-center hidden lg:flex">
@@ -117,7 +119,7 @@ const NavBar = () => {
                   {user?.displayName}
                 </h1>
                 <div className="px-4 py-2 w-full text-left block">
-                  <NavLink>
+                  <NavLink to="/profile">
                     <div className="flex items-center hover:text-[#1eb2a6] gap-2">
                       <FaUser className="text-lg" /> <span>View Profile</span>
                     </div>
@@ -142,15 +144,6 @@ const NavBar = () => {
             </NavLink>
           </div>
         )}
-        {/* {user ? (
-          <div onClick={handleSignOut} className="btn btn-ghost primary-btn">
-            Sign Out
-          </div>
-        ) : (
-          <Link to="/signin" className="btn btn-ghost primary-btn">
-            Sign In
-          </Link>
-        )} */}
       </div>
     </nav>
   );
