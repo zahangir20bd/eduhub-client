@@ -15,7 +15,6 @@ const SocialSignIn = () => {
     googleSignIn()
       .then((result) => {
         const currentUser = result.user;
-        navigate(from, { replace: true });
         // console.log(currentUser);
         const newUser = {
           user_name: currentUser.displayName,
@@ -23,17 +22,19 @@ const SocialSignIn = () => {
           user_image: currentUser.photoURL,
           user_role: "Student",
         };
-        //   fetch("https://focus-academy-server.vercel.app/users", {
-        //     method: "POST",
-        //     headers: {
-        //       "content-type": "application/json",
-        //     },
-        //     body: JSON.stringify(newUser),
-        //   })
-        //     .then((res) => res.json())
-        //     .then(() => {
-        //       // console.log("response", data);
-        //     });
+        fetch("http://localhost:5000/users", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(newUser),
+        })
+          .then((res) => res.json())
+          .then(() => {
+            navigate(from, { replace: true });
+
+            // console.log("response", data);
+          });
       })
       .catch((error) => {
         console.log(error);
@@ -44,7 +45,6 @@ const SocialSignIn = () => {
     gitHubSignIn()
       .then((result) => {
         const currentUser = result.user;
-        navigate(from, { replace: true });
         // console.log(currentUser);
         const newUser = {
           user_name: currentUser.displayName,
@@ -52,17 +52,19 @@ const SocialSignIn = () => {
           user_image: currentUser.photoURL,
           user_role: "student",
         };
-        // fetch("https://focus-academy-server.vercel.app/users", {
-        //   method: "POST",
-        //   headers: {
-        //     "content-type": "application/json",
-        //   },
-        //   body: JSON.stringify(newUser),
-        // })
-        //   .then((res) => res.json())
-        //   .then(() => {
-        //     // console.log("response", data);
-        //   });
+        fetch("http://localhost:5000/users", {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(newUser),
+        })
+          .then((res) => res.json())
+          .then(() => {
+            navigate(from, { replace: true });
+
+            // console.log("response", data);
+          });
       })
       .catch((error) => {
         console.log(error);
